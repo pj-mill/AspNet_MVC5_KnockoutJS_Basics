@@ -1,0 +1,61 @@
+﻿<subtitle params="title: 'Form Binding'"></subtitle>
+<p>
+    <span></span>
+</p>
+<form id="employeeForm" name="employeeForm" method="POST" style="margin-top:20px; padding: 20px;" autocomplete="off">
+    
+        <div class="form-group">
+            <label class="form-label">First Name:</label>
+            <input type="text" id="txtFirstName" name="txtFirstName" data-bind="value:Employee.FirstName" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Last Name:</label>
+            <input type="text" id="txtLastName" name="txtLastName" data-bind="value:Employee.LastName" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Full Name:</label>
+            <input type="text" id="txtFullName" name="txtFullName" data-bind="value:Employee.FullName" readonly="readonly" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Date Of Birth:</label>
+            <input type="text" id="txtDateOfBirth" name="dateOfBirth" data-bind="value:Employee.DateOfBirth" class="form-control" />
+        </div>
+        <div>
+            <label>Education:</label>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="graduation" id="chkGraduation" name="chkGraduation" data-bind="checked:Employee.EducationList" />Graduation
+                </label>
+                <label>
+                    <input type="checkbox" value="postGraduation" id="chkPostGraduation" name="chkPostGraduation" data-bind="checked:Employee.EducationList" />PostGraduation
+                </label>
+            </div>
+
+        </div>
+        <div>
+            <label>Gender:</label>
+            <div class="radio">
+                <label>
+                    <input type="radio" id="rdoMale" name="gender" value="0" data-bind="checked:Employee.Gender" />Male
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" id="rdoFeMale" name="gender" value="1" data-bind="checked:Employee.Gender" />Female
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-label">Department:</label>
+            <select id="ddlDepartment" name="ddlDepartment" data-bind="options:Employee.DepartmentList, optionsValue:'Id', optionsText:'Name', value:Employee.DepartmentId" class="form-control" ></select>
+        </div>
+        <div class="form-group">
+            <input type="button" id="btnSubmit" value="Submit" data-bind="click: submit" class="btn btn-primary"/>
+            <input type="button" id="btnReset" value="Reset" data-bind="click: reset" class="btn btn-danger"/>
+        </div>
+        <p data-bind="text: Message"></p>
+   
+</form>
