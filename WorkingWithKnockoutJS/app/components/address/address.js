@@ -1,13 +1,17 @@
 ﻿/*
 A RequireJS 'component' module. 
-Key thing to note here is use of the text plugin to load load the greeting.html. 
+Key thing to note here is use of the text plugin to load the greeting.html. 
 Require does all the work to load the template and stuff it into the greeterTemplate parameter.
 */
-define(['knockout', 'text!./greeting.html'], function (ko, greeterTemplate) {
+define(['knockout', 'text!./address.html'], function (ko, greeterTemplate) {
     function greeterViewModel(params) {
         var self = this;
-        self.greeting = ko.observable(params.name);
+
+        self.name = ko.observable(params.name);
+        self.adr = ko.observable(params.adr);
+        self.adr2 = ko.observable(params.adr2);
         self.date = ko.observable(new Date());
+
         return self;
     }
     return { viewModel: greeterViewModel, template: greeterTemplate };

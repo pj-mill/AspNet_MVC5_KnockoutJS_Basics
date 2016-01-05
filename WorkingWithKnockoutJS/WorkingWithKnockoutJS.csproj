@@ -110,12 +110,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\components\login\login.html" />
+    <Content Include="app\components\login\login.js" />
     <Content Include="app\components\subtitle\subtitle.html" />
     <Content Include="app\components\subtitle\subtitle.js" />
     <Content Include="app\pages\binding_form\binding_form.html" />
     <Content Include="app\pages\binding_form\binding_form.js" />
     <Content Include="app\pages\binding_list\binding_list.html" />
     <Content Include="app\pages\binding_list\binding_list.js" />
+    <Content Include="app\pages\components\components.html" />
+    <Content Include="app\pages\components\components.js" />
+    <Content Include="app\pages\HtmlPage1.html" />
     <Content Include="app\pages\simplevalidation\simplevalidation.html" />
     <Content Include="app\pages\simplevalidation\simplevalidation.js" />
     <Content Include="Content\simple-sidebar.css" />
@@ -137,11 +142,10 @@
     <Content Include="app\boot\router-HasherJS.js" />
     <Content Include="app\boot\router.js" />
     <Content Include="app\boot\startup.js" />
-    <Content Include="app\components\greeter\greeting.html" />
-    <Content Include="app\components\greeter\greeting.js" />
+    <Content Include="app\components\address\address.html" />
+    <Content Include="app\components\address\address.js" />
     <Content Include="app\pages\home\home.html" />
     <Content Include="app\pages\home\home.js" />
-    <Content Include="app\pages\settings\settings.html" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />

@@ -12,7 +12,6 @@
             return price ? "€" + price.toFixed(2) : "No Charge";
         });
 
-        //return self;
     }
 
     function BindingListViewModel() {
@@ -51,6 +50,7 @@
             return  rv;
         });
 
+        //return self;
     }
 
 

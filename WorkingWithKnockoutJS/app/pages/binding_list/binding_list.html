@@ -1,4 +1,4 @@
-﻿<subtitle params="title: 'List Binding'"></subtitle>
+﻿<subtitle params="title: 'List Binding',url: 'https://github.com/Apollo013/KnockoutJS/tree/master/WorkingWithKnockoutJS/app/pages/binding_list'"></subtitle>
 
 <h3>Your seat reservations (<span data-bind="text: seats().length"></span>)</h3>
 
@@ -13,8 +13,8 @@
     </thead>
     <tbody data-bind="foreach: seats">
         <tr>
-            <td><input data-bind="value: name" /></td>
-            <td><select data-bind="options: $parent.availableMeals, value: meal, optionsText: 'mealName'"></select></td>
+            <td><input data-bind="value: name" class="form-control"/></td>
+            <td><select data-bind="options: $parent.availableMeals, value: meal, optionsText: 'mealName'" class="form-control"></select></td>
             <td data-bind="text: formattedPrice"></td>
             <td><a href="#" data-bind="click: $parent.removeSeat" class="btn btn-danger">Remove</a></td>
         </tr>
