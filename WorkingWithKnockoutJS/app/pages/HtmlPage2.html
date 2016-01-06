@@ -1,0 +1,25 @@
+﻿<script id="customMessageTemplate" type="text/html">
+    <em class="customMessage" data-bind='validationMessage: field'></em>
+</script>
+
+<fieldset>
+    <legend>User: <span data-bind='text: errors().length'></span> errors</legend>
+    <label>First name: <input data-bind='value: firstName' /></label>
+    <label>Last name: <input data-bind='value: lastName' /></label>
+    <div data-bind='validationOptions: { messageTemplate: "customMessageTemplate" }'>
+        <label>Email: <input data-bind='value: emailAddress' required pattern="@" /></label>
+        <label>Location: <input data-bind='value: location' /></label>
+        <label>Age: <input data-bind='value: age' required /></label>
+    </div>
+    <label>
+        Subscriptions:
+        <select data-bind='value: subscription, options: subscriptionOptions, optionsCaption: "Choose one..."'></select>
+    </label>
+    <label>Password: <input data-bind='value: password' type="password" /></label>
+    <label>Retype password: <input data-bind='value: confirmPassword' type="password" /></label>
+    <label>10 + 1 = <input data-bind='value: captcha' /></label>
+</fieldset>
+<button type="button" data-bind='click: submit'>Submit</button>
+<br />
+<br />
+<button type="button" data-bind='click: requireLocation'>Make 'Location' required</button>

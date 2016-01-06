@@ -118,11 +118,10 @@
     <Content Include="app\pages\binding_form\binding_form.js" />
     <Content Include="app\pages\binding_list\binding_list.html" />
     <Content Include="app\pages\binding_list\binding_list.js" />
+    <Content Include="app\pages\crud\crud.html" />
+    <Content Include="app\pages\crud\crud.js" />
     <Content Include="app\pages\components\components.html" />
     <Content Include="app\pages\components\components.js" />
-    <Content Include="app\pages\HtmlPage1.html" />
-    <Content Include="app\pages\simplevalidation\simplevalidation.html" />
-    <Content Include="app\pages\simplevalidation\simplevalidation.js" />
     <Content Include="Content\simple-sidebar.css" />
     <Content Include="packages.config" />
     <Content Include="Scripts\knockout\knockout.validation.js" />

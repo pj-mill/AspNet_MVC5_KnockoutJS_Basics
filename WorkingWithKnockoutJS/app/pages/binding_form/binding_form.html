@@ -1,17 +1,22 @@
 ﻿<subtitle params="title: 'Form Binding', url: 'https://github.com/Apollo013/KnockoutJS/tree/master/WorkingWithKnockoutJS/app/pages/binding_form'"></subtitle>
-<p>
-    <span></span>
-</p>
-<form id="employeeForm" name="employeeForm" method="POST" style="margin-top:20px; padding: 20px;" autocomplete="off">
-    
+<div class="bg-primary" style="padding: 5px; margin-top:10px;">
+    <h4>What's being demonstrated ?</h4>
+    <ul>
+        <li>Data-Binding to various form controls using 'textInput', 'value' & 'checked'</li>
+        <li>Data-Binding using ' ko.observable', & 'ko.observableArray'</li>
+        <li>Handling the 'click' event for button controls</li>
+    </ul>
+</div>
+    <form id="employeeForm" name="employeeForm" method="POST" style="margin-top:20px; padding: 20px;" autocomplete="off">
+
         <div class="form-group">
             <label class="form-label">First Name:</label>
-            <input type="text" id="txtFirstName" name="txtFirstName" data-bind="value:Employee.FirstName" class="form-control" />
+            <input type="text" id="txtFirstName" name="txtFirstName" data-bind="textInput: Employee.FirstName" class="form-control" />
         </div>
 
         <div class="form-group">
             <label class="form-label">Last Name:</label>
-            <input type="text" id="txtLastName" name="txtLastName" data-bind="value:Employee.LastName" class="form-control" />
+            <input type="text" id="txtLastName" name="txtLastName" data-bind="textInput: Employee.LastName" class="form-control" />
         </div>
 
         <div class="form-group">
@@ -50,12 +55,12 @@
         </div>
         <div class="form-group">
             <label class="form-label">Department:</label>
-            <select id="ddlDepartment" name="ddlDepartment" data-bind="options:Employee.DepartmentList, optionsValue:'Id', optionsText:'Name', value:Employee.DepartmentId" class="form-control" ></select>
+            <select id="ddlDepartment" name="ddlDepartment" data-bind="options:Employee.DepartmentList, optionsValue:'Id', optionsText:'Name', value:Employee.DepartmentId" class="form-control"></select>
         </div>
         <div class="form-group">
-            <input type="button" id="btnSubmit" value="Submit" data-bind="click: submit" class="btn btn-primary"/>
-            <input type="button" id="btnReset" value="Reset" data-bind="click: reset" class="btn btn-danger"/>
+            <input type="button" id="btnSubmit" value="Submit" data-bind="click: submit" class="btn btn-primary" />
+            <input type="button" id="btnReset" value="Reset" data-bind="click: reset" class="btn btn-danger" />
         </div>
         <p data-bind="text: Message"></p>
-   
-</form>
+
+    </form>
