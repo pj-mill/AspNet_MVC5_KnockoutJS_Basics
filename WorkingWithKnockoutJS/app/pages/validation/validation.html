@@ -34,7 +34,7 @@
     <h4>Warning : <span data-bind='text: errors().length'></span> errors</h4>
 </div>
 
-<form class="form-horizontal" novalidate>
+<form class="form-horizontal">
     
     <div class="form-group">
         <label  class="col-sm-2 control-label">First Name:</label>
@@ -54,7 +54,7 @@
         <div class="form-group">
             <label class="col-sm-2 control-label">Email:</label>
             <div class="col-sm-10">
-                <input type="email" data-bind="textInput: emailAddress" class="form-control" required pattern="@" />
+                <input type="text" data-bind="textInput: emailAddress" class="form-control" required />
             </div>
         </div>
 
@@ -120,23 +120,4 @@
         <button type="button" data-bind='click: requireLocation' class="btn btn-sm btn-primary">Make 'Location' required</button>
     </div>
 </form>
-<!--
-<fieldset>
-    
-      <div data-bind='validationOptions: { messageTemplate: "customMessageTemplate" }'>
-        <label>Email: <input data-bind='value: emailAddress' required pattern="@" /></label>
-        <label>Location: <input data-bind='value: location' required /></label>
-        <label>Age: <input data-bind='value: age' required /></label>
-    </div>  
-        <label>
-        Subscriptions:
-        <select data-bind='value: subscription, options: subscriptionOptions, optionsCaption: "Choose one..."'></select>
-    </label>
 
-            <label>Password: <input data-bind='value: password' type="password" /></label>
-    <label>Retype password: <input data-bind='value: confirmPassword' type="password" /></label>
-    <label>10 + 1 = <input data-bind='value: captcha' /></label>
-       
-
-</fieldset>
-     -->

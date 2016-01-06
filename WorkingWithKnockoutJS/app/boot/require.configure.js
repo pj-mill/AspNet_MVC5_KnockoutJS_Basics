@@ -12,6 +12,7 @@ var require = {
     baseUrl: "/",
     paths: {
         "bootstrap": "Scripts/bootstrap/bootstrap",
+        //"bootstrap-rating": "Scripts/bootstrap/star-rating",
         "historyjs": "Scripts/history/native.history",
         "crossroads": "Scripts/crossroads/crossroads",
         "jquery": "Scripts/jquery/jquery-1.9.1",
@@ -26,7 +27,7 @@ var require = {
         "bootstrap": {
             "deps": ["jquery"]
         },
-        "knockout.validation": {
+        "knockout-validation": {
             "deps": ["knockout"]
         }
     }

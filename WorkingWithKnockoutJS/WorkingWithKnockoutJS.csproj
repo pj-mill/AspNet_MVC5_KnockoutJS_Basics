@@ -114,6 +114,8 @@
     <Content Include="app\components\login\login.js" />
     <Content Include="app\components\subtitle\subtitle.html" />
     <Content Include="app\components\subtitle\subtitle.js" />
+    <Content Include="app\pages\binding_custom\binding_custom.html" />
+    <Content Include="app\pages\binding_custom\binding_custom.js" />
     <Content Include="app\pages\binding_form\binding_form.html" />
     <Content Include="app\pages\binding_form\binding_form.js" />
     <Content Include="app\pages\binding_list\binding_list.html" />
@@ -125,7 +127,10 @@
     <Content Include="app\pages\validation\validation.html" />
     <Content Include="app\pages\validation\validation.js" />
     <Content Include="Content\simple-sidebar.css" />
+    <Content Include="Content\star-rating.min.css" />
+    <Content Include="img\star.jpg" />
     <Content Include="packages.config" />
+    <Content Include="Scripts\bootstrap\star-rating.min.js" />
     <Content Include="Scripts\knockout\knockout.validation.js" />
     <Content Include="Scripts\knockout\knockout.validation.min.js" />
     <Content Include="Scripts\knockout\knockout.validation.min.js.map" />

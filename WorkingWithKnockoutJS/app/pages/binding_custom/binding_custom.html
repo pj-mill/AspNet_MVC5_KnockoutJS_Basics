@@ -1,0 +1,48 @@
+﻿<!-- Original code source: http://learn.knockoutjs.com/#/?tutorial=custombindings -->
+<style>    
+    table th { text-align:left; }
+    table th:last-child { min-width: 130px; }
+
+    .starRating span { width:24px; height:24px; background-image: url(../../../img/star.jpg); display:inline-block; cursor: pointer;  opacity:0.5;} 
+    .starRating span.chosen { opacity: 1; }
+    .starRating:hover span { opacity:0.5; } 
+    .starRating:hover span.hoverChosen { opacity: 1; }
+</style>
+
+
+<subtitle params="title: 'Custom Binding', url: 'https://github.com/Apollo013/KnockoutJS/tree/master/WorkingWithKnockoutJS/app/pages/binding_custom'"></subtitle>
+
+<div class="bg-primary col-sm-12" style="padding: 5px; margin-top:10px; margin-bottom:10px;">
+    <h4>What's being demonstrated ?</h4>
+    <div class="col-sm-6">
+        <ul>
+            <li>Custom binding to fade in an element when too many points are assigned</li>
+            <li>Custom binding to handle star ratings</li>
+        </ul>
+    </div>
+    <div class="col-sm-6">
+        <ul>
+            <li>Integrating jquery with KnockoutJS</li>
+            <li>Original code source: http://learn.knockoutjs.com/#/?tutorial=custombindings</li>
+        </ul>
+    </div>
+</div>
+
+<h3 class="bg-success" style="padding:10px 0px 10px 10px;" data-bind="text: question"></h3>
+<p>Please distribute <b data-bind="text: pointsBudget"></b> points between the following options.</p>
+
+<table class="table">
+    <thead><tr><th>Option</th><th>Importance</th></tr></thead>
+    <tbody data-bind="foreach: answers">
+        <tr>
+            <td data-bind="text: answerText"></td>
+            <td data-bind="starRating: points"></td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 class="bg-danger" style="padding:10px 0px 10px 10px;" data-bind="fadeVisible: pointsRemaining() < 0">You've used too many points! Please remove some.</h3>
+<p data-bind="text: pointsDisplay()"></p>
+<button data-bind="click: save, enable: pointsRemaining() >= 0" class="btn btn-sm btn-primary">Finished</button>
+    
+

@@ -26,7 +26,8 @@ define(["jquery", "knockout", "crossroads", "historyjs"], function ($, ko, cross
             { url: 'bindingform', params: { page: 'bindingform' } },
             { url: 'bindinglist', params: { page: 'bindinglist' } },
             { url: 'crud', params: { page: 'crud' } },
-            { url: 'validation', params: { page: 'validation' } }
+            { url: 'validation', params: { page: 'validation' } },
+            { url: 'bindingcustom', params: { page: 'bindingcustom' } }
         ]
     });
 

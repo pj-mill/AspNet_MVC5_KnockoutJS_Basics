@@ -31,7 +31,9 @@ define(['jquery', 'knockout', './router', 'bootstrap', 'knockout-projections', '
     ko.components.register('bindinglist', { require: 'app/pages/binding_list/binding_list' });
     ko.components.register('crud', { require: 'app/pages/crud/crud' });
     ko.components.register('validation', { require: 'app/pages/validation/validation' });
+    ko.components.register('bindingcustom', { require: 'app/pages/binding_custom/binding_custom' });
 
+    
     // APPLY BINDINGS
     ko.applyBindings({ route: router.currentRoute });
 });
