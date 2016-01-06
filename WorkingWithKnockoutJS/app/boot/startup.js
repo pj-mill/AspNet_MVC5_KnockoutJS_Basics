@@ -30,25 +30,8 @@ define(['jquery', 'knockout', './router', 'bootstrap', 'knockout-projections', '
     ko.components.register('bindingform', { require: 'app/pages/binding_form/binding_form' });
     ko.components.register('bindinglist', { require: 'app/pages/binding_list/binding_list' });
     ko.components.register('crud', { require: 'app/pages/crud/crud' });
+    ko.components.register('validation', { require: 'app/pages/validation/validation' });
 
-
-    /*
-    ko.components.register('simplevalidation', { template: { require: 'text!app/pages/simplevalidation/simplevalidation.html' } });
-    */
-
-    ko.validation.rules.pattern.message = 'Invalid.';
-
-
-    var knockoutValidationSettings = {
-        registerExtenders: true,
-        messagesOnModified: true,
-        insertMessages: true,
-        parseInputAttributes: true,
-        messageTemplate: null
-    };
-
-    ko.validation.init(knockoutValidationSettings, true);
-
-
+    // APPLY BINDINGS
     ko.applyBindings({ route: router.currentRoute });
 });

@@ -17,7 +17,7 @@ var require = {
         "jquery": "Scripts/jquery/jquery-1.9.1",
         "knockout": "Scripts/knockout/knockout-3.4.0",
         "knockout-projections": "Scripts/knockout/knockout-projections",
-        "knockout.validation": "Scripts/knockout/knockout.validation",
+        "knockout-validation": "Scripts/knockout/knockout.validation",
         "signals": "Scripts/crossroads/signals",
         //"hasher": "Scripts/crossroads/hasher", // replaced with historyjs
         "text": "Scripts/require/text"

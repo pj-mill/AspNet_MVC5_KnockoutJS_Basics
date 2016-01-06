@@ -17,7 +17,7 @@ This is because router.js is not a part of the Scripts folder rather it is in th
 Another difference to note is how we are setting up 'simplevalidation' component. This is the way to setup HTML only components that have no Javascript associated with them.
 */
 
-define(['jquery', 'knockout', './router', 'bootstrap', 'knockout-projections'], function ($, ko, router) {
+define(['jquery', 'knockout', './router', 'bootstrap', 'knockout-projections', 'knockout-validation'], function ($, ko, router) {
 
     // REGISTER COMPONENTS
     ko.components.register('subtitle', { require: 'app/components/subtitle/subtitle' });
@@ -29,12 +29,9 @@ define(['jquery', 'knockout', './router', 'bootstrap', 'knockout-projections'], 
     ko.components.register('components', { require: 'app/pages/components/components' });
     ko.components.register('bindingform', { require: 'app/pages/binding_form/binding_form' });
     ko.components.register('bindinglist', { require: 'app/pages/binding_list/binding_list' });
-    
+    ko.components.register('crud', { require: 'app/pages/crud/crud' });
+    ko.components.register('validation', { require: 'app/pages/validation/validation' });
 
-
-    /*
-    ko.components.register('simplevalidation', { template: { require: 'text!app/pages/simplevalidation/simplevalidation.html' } });
-    */
-
+    // APPLY BINDINGS
     ko.applyBindings({ route: router.currentRoute });
 });

@@ -1,0 +1,142 @@
+﻿<script id="customMessageTemplate" type="text/html">
+    <em class="customMessage" data-bind='validationMessage: field'></em>
+</script>
+
+<style>
+    .validationMessage {
+        color: Red;
+    }
+
+    .customMessage {
+        color: Orange;
+    }
+</style>
+
+<subtitle params="title: 'Validation', url: 'https://github.com/Apollo013/KnockoutJS/tree/master/WorkingWithKnockoutJS/app/pages/validation'"></subtitle>
+
+<div class="bg-primary col-sm-12" style="padding: 5px; margin-top:10px;">
+    <h4>What's being demonstrated ?</h4>
+    <div class="col-sm-6">
+        <ul>
+            <li>Data validation with 'ko.extenders'</li>
+            <li>Dynamic validation (click the 'make location required' button)</li>
+        </ul>
+    </div>
+    <div class="col-sm-6">
+        <ul>
+            <li>Custom Validators</li>
+            <li>Custom messages</li>
+        </ul>
+    </div>
+</div>
+
+<div class="bg-danger col-sm-12" style="margin:10px 0px; padding-left:5px; " data-bind="visible: errors().length > 0">
+    <h4>Warning : <span data-bind='text: errors().length'></span> errors</h4>
+</div>
+
+<form class="form-horizontal" novalidate>
+    
+    <div class="form-group">
+        <label  class="col-sm-2 control-label">First Name:</label>
+        <div class="col-sm-10">
+            <input type="text" data-bind="textInput: firstName, hasFocus: true" class="form-control" />
+        </div>        
+    </div>
+
+    <div class="form-group" data-bind="css: { error: lastName.hasError }">
+        <label class="col-sm-2 control-label">Last Name:</label>
+        <div class="col-sm-10">
+            <input type="text" data-bind="textInput: lastName, valueUpdate: "afterkeydown"" class="form-control" required/>
+        </div>
+    </div>
+
+    <div data-bind='validationOptions: { messageTemplate: "customMessageTemplate" }'>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Email:</label>
+            <div class="col-sm-10">
+                <input type="email" data-bind="textInput: emailAddress" class="form-control" required pattern="@" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Location:</label>
+            <div class="col-sm-10">
+                <input type="text" data-bind="textInput: location" class="form-control" required />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Age:</label>
+            <div class="col-sm-10">
+                <input type="text" data-bind="textInput: age" class="form-control" required />
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Subscriptions:</label>
+        <div class="col-sm-10">
+            <select data-bind="value: subscription, options: subscriptionOptions, optionsCaption: 'Choose one...'" class="form-control"></select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Password:</label>
+        <div class="col-sm-10">
+            <input type="password" data-bind="value: password" class="form-control" />
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Confirm Password:</label>
+        <div class="col-sm-10">
+            <input type="password" data-bind="value: confirmPassword" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Captcha - 10 + 1 =</label>
+        <div class="col-sm-10">
+            <input type="text" data-bind="textInput: captcha" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Round Number</label>
+        <div class="col-sm-10">
+            <input type="text" data-bind="textInput: myNumberOne" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Round to 2 digits</label>
+        <div class="col-sm-10">
+            <input type="text" data-bind="textInput: myNumberTwo" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group pull-right">
+        <button type="button" data-bind='click: submit' class="btn btn-sm btn-primary">Submit</button>
+        <button type="button" data-bind='click: requireLocation' class="btn btn-sm btn-primary">Make 'Location' required</button>
+    </div>
+</form>
+<!--
+<fieldset>
+    
+      <div data-bind='validationOptions: { messageTemplate: "customMessageTemplate" }'>
+        <label>Email: <input data-bind='value: emailAddress' required pattern="@" /></label>
+        <label>Location: <input data-bind='value: location' required /></label>
+        <label>Age: <input data-bind='value: age' required /></label>
+    </div>  
+        <label>
+        Subscriptions:
+        <select data-bind='value: subscription, options: subscriptionOptions, optionsCaption: "Choose one..."'></select>
+    </label>
+
+            <label>Password: <input data-bind='value: password' type="password" /></label>
+    <label>Retype password: <input data-bind='value: confirmPassword' type="password" /></label>
+    <label>10 + 1 = <input data-bind='value: captcha' /></label>
+       
+
+</fieldset>
+     -->

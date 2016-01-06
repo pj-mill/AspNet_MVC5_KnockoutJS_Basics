@@ -24,11 +24,9 @@ define(["jquery", "knockout", "crossroads", "historyjs"], function ($, ko, cross
             { url: 'home', params: { page: 'home' } },
             { url: 'components', params: { page: 'components' } },
             { url: 'bindingform', params: { page: 'bindingform' } },
-            { url: 'bindinglist', params: { page: 'bindinglist' } }
-            /*,
-            { url: 'simplevalidation', params: { page: 'simplevalidation' } },
-            { url: 'settings', params: { page: 'settings' } }
-            */
+            { url: 'bindinglist', params: { page: 'bindinglist' } },
+            { url: 'crud', params: { page: 'crud' } },
+            { url: 'validation', params: { page: 'validation' } }
         ]
     });
 

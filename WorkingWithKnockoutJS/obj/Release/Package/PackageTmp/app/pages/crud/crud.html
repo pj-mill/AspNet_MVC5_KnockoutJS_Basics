@@ -1,0 +1,71 @@
+﻿<subtitle params="title: 'List Form Binding',url: 'https://github.com/Apollo013/KnockoutJS/tree/master/WorkingWithKnockoutJS/app/pages/crud'"></subtitle>
+
+<div class="bg-primary" style="padding: 5px; margin-top:10px;">
+    <h4>What's being demonstrated ?</h4>
+    <ul>
+        <li>CRUD operations using a form</li>
+        <li>Control flow using 'with'</li>
+        <li>Setting focus on a particular element using 'hasFocus'</li>
+    </ul>
+</div>
+
+
+<div id="productList" style="display: block;" data-bind="visible: !editing()">
+    <h2>Available Products</h2>
+    <input type="button" id="btnNew" value="New Product" data-bind="click: newProduct" class="btn btn-success pull-right" />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: products">
+            <tr>
+                <td data-bind="text: productCode"></td>
+                <td data-bind="text: productName"></td>
+                <td data-bind="text: productPrice"></td>
+                <td data-bind="text: productQty"></td>
+                <td><a class="btn btn-sm btn-primary" href="#" data-bind="click: $parent.edit">Edit</a></td>
+                <td><a class="btn btn-sm btn-danger" href="#" data-bind="click: $parent.remove">Remove</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div data-bind="visible: editing, with: currentProduct">
+    <h2 data-bind="text: $parent.actionName"></h2>
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="productCode" class="col-sm-2 control-label">Product Code:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="productCode" data-bind="textInput: productCode" readonly>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="productName" class="col-sm-2 control-label">Product Name:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="productName" data-bind="textInput: productName, hasFocus: $parent.editing">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="productPrice" class="col-sm-2 control-label">Product Price:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="productPrice" data-bind="textInput: productPrice">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="productQty" class="col-sm-2 control-label">Product Quantity:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="productQty" data-bind="textInput: productQty">
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="form-group pull-right" data-bind="visible: editing">
+    <input type="button" id="btnSubmit" value="Save" data-bind="click: save" class="btn btn-primary" />
+    <input type="button" id="btnReset" value="Cancel" data-bind="click: cancel" class="btn btn-primary" />
+</div>
