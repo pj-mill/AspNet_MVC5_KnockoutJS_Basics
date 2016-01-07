@@ -126,6 +126,8 @@
     <Content Include="app\pages\crud\crud.js" />
     <Content Include="app\pages\components\components.html" />
     <Content Include="app\pages\components\components.js" />
+    <Content Include="app\pages\json\json.html" />
+    <Content Include="app\pages\json\json.js" />
     <Content Include="app\pages\sort_and_filter\sort_and_filter.html" />
     <Content Include="app\pages\sort_and_filter\sort_and_filter.js" />
     <Content Include="app\pages\validation\validation.html" />
@@ -139,6 +141,7 @@
     <Content Include="Scripts\knockout\knockout.validation.min.js" />
     <Content Include="Scripts\knockout\knockout.validation.min.js.map" />
     <Content Include="Views\Home\SimpleValidation.cshtml" />
+    <Content Include="app\pages\json\people.json" />
     <None Include="Properties\PublishProfiles\knockoutjs - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -241,6 +244,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
+      <UserProperties app_4pages_4json_4people_1json__JSONSchema="http://json.schemastore.org/jsonld" />
     </VisualStudio>
   </ProjectExtensions>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

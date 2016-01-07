@@ -27,7 +27,8 @@ define(["jquery", "knockout", "crossroads", "historyjs"], function ($, ko, cross
             { url: 'crud', params: { page: 'crud' } },
             { url: 'validation', params: { page: 'validation' } },
             { url: 'bindingcustom', params: { page: 'bindingcustom' } },
-            { url: 'sortfilter', params: { page: 'sortfilter' } }
+            { url: 'sortfilter', params: { page: 'sortfilter' } },
+            { url: 'json', params: { page: 'json' } }
         ]
     });
 
@@ -46,7 +47,7 @@ define(["jquery", "knockout", "crossroads", "historyjs"], function ($, ko, cross
             function (e) {
                 var title, urlPath;
                 urlPath = $(this).attr("href"); 
-                if (urlPath.slice(0, 1) == "#" || urlPath.slice(0, 4) == "http") { // Allow CORS so that we can link to the project on GitHub
+                if (urlPath.slice(0, 1) == "#" || urlPath.slice(0, 4) == "http" || urlPath.slice(0, 3) == "app") { // Allow CORS so that we can link to the project on GitHub
                     return true;
                 }
                 e.preventDefault();

@@ -23,11 +23,16 @@ namespace WorkingWithKnockoutJS.Controllers
         }
 
         [HttpPost]
+        [Route("home/saveperson")]
+        public ActionResult SavePerson()
+        {
+            return new HttpStatusCodeResult(200);
+        }
+
+        [HttpPost]
         public ActionResult SaveEmployee(Employee emp)
         {
-            //EmployeeModel save code here
-            //return View("EmployeeInfo");
-            return new HttpStatusCodeResult(400);
+            return new HttpStatusCodeResult(200);
 
         }
     }

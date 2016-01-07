@@ -1,0 +1,39 @@
+﻿<subtitle params="title: 'Json', url: 'https://github.com/Apollo013/KnockoutJS/tree/master/WorkingWithKnockoutJS/app/pages/json'"></subtitle>
+
+<div class="bg-primary col-sm-12" style="padding: 5px; margin-top:10px;">
+    <h4>What's being demonstrated ?</h4>
+    <div class="col-sm-6">
+        <ul>
+            <li>Data validation with 'ko.extenders'</li>
+            <li>Dynamic validation (click the 'make location required' button)</li>
+        </ul>
+    </div>
+    <div class="col-sm-6">
+        <ul>
+            <li>Custom Validators</li>
+            <li>Custom messages</li>
+            <li>Templates</li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="bg-success col-sm-12" style="margin:10px 0px; padding:10px 5px;">
+    <a href="#" data-bind="click: read" class="btn btn-sm btn-primary">Load people.json</a>
+    <a href="#" data-bind="click: save" class="btn btn-sm btn-primary">Add another person to people.json</a>
+</div>
+
+<table class="table">
+    <thead>
+        <tr data-bind="foreach: headers">
+            <th data-bind="click: $parent.sort, text: title"></th>
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: peopleBinding">
+        <tr>
+            <td data-bind="text: firstName"></td>
+            <td data-bind="text: lastName"></td>
+            <td data-bind="text: age"></td>
+        </tr>
+    </tbody>
+</table>

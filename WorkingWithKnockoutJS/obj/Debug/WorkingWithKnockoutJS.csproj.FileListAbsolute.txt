@@ -75,6 +75,5 @@ C:\App Devs\Tutorials\KnockoutJS\KnockoutJS\WorkingWithKnockoutJS\bin\System.Web
 C:\App Devs\Tutorials\KnockoutJS\KnockoutJS\WorkingWithKnockoutJS\bin\System.Web.WebPages.xml
 C:\App Devs\Tutorials\KnockoutJS\KnockoutJS\WorkingWithKnockoutJS\bin\System.Web.WebPages.Deployment.xml
 C:\App Devs\Tutorials\KnockoutJS\KnockoutJS\WorkingWithKnockoutJS\bin\System.Web.WebPages.Razor.xml
-C:\App Devs\Tutorials\KnockoutJS\KnockoutJS\WorkingWithKnockoutJS\obj\Debug\WorkingWithKnockoutJS.csprojResolveAssemblyReference.cache
 C:\App Devs\Tutorials\KnockoutJS\KnockoutJS\WorkingWithKnockoutJS\obj\Debug\WorkingWithKnockoutJS.dll
 C:\App Devs\Tutorials\KnockoutJS\KnockoutJS\WorkingWithKnockoutJS\obj\Debug\WorkingWithKnockoutJS.pdb

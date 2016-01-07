@@ -1,0 +1,35 @@
+﻿{
+  "people": [
+    {
+      "firstName": "Peter",
+      "lastName": "Williams",
+      "age": 16
+    },
+
+    {
+      "firstName": "James",
+      "lastName": "Murphy",
+      "age": 20
+    },
+    {
+      "firstName": "Susan",
+      "lastName": "Kavanagh",
+      "age": 20
+    },
+    {
+      "firstName": "Jeremy",
+      "lastName": "Keene",
+      "age": 8
+    },
+    {
+      "firstName": "Megan",
+      "lastName": "Murphy",
+      "age": 46
+    },
+    {
+      "firstName": "Martha",
+      "lastName": "Murphy",
+      "age": 32
+    }
+  ]
+}

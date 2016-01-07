@@ -50,7 +50,6 @@
                 return self.people();
             }
             else {
-                
                 var matchingItems = [];
                 var counter = self.people().length;
                 for (var i = 0 ; i < counter ; i++) {
@@ -74,13 +73,13 @@
             if (self.currrentHeader === header) {
                 header.asc = !header.asc; //toggle the direction of the sort
             } else {
-                self.currrentHeader = header; //first click, remember it
+                self.currrentHeader = header; // Different header clicked
             }
 
             // Get the sort key field (firstname, lastname, etc..)
             var prop = self.currrentHeader.sortKey;
 
-            // Create an ascending and a descending sort function
+            // Create ascending and descending sort functions
             var ascSort = function (a, b) { return a[prop] < b[prop] ? -1 : a[prop] > b[prop] ? 1 : 0; };
             var descSort = function (a, b) { return a[prop] > b[prop] ? -1 : a[prop] < b[prop] ? 1 : 0; };
 
