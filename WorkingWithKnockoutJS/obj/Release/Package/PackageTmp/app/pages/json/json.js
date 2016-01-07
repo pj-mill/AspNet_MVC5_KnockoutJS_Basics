@@ -48,32 +48,10 @@
             var data = ko.toJSON({ people: self.people });
             
             // Write to file
-            $.post("home/saveperson", data, function (rv) {
-               //self.load();
+            $.post("app/pages/json/people.json", data, function (rv) {
+               
             });
 
-            //ko.utils.postJson("app/pages/json/people.json", data);
-
-            /*
-            $.ajax({
-                url: "app/pages/json/people.json",
-                dataType: "json",
-                headers: { 
-                    "Content-Type": "application/json",
-                    "X-HTTP-Method-Override": "POST" },
-                type: "POST",
-                data: data,
-                processdata: true,
-
-                success: function (rv) {
-                    alert('ok');
-                },
-
-                error: function (xhr, textStatus, errorThrown) {
-                    alert('error');
-                }
-            });
-            */
         };
     }
 
