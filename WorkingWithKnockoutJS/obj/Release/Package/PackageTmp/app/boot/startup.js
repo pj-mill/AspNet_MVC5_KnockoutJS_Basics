@@ -12,9 +12,8 @@ Also note instead of specifying the hard-coded template and view model, we are s
 Needless to say, as we add more components they will need to be registered here.
 
 To initialize routing, we use Require’s module loading to request for it in the required collection. Note the syntax ./router. 
-This is because router.js is not a part of the Scripts folder rather it is in the same folder as the startup.js and also the fact that it’s not defined in require.config.js.
+This is because router.js is not a part of the Scripts folder rather it is in the same folder as startup.js and also the fact that it’s not defined in require.configure.js.
 
-Another difference to note is how we are setting up 'simplevalidation' component. This is the way to setup HTML only components that have no Javascript associated with them.
 */
 
 define(['jquery', 'knockout', './router', 'bootstrap', 'knockout-projections', 'knockout-validation'], function ($, ko, router) {
@@ -23,7 +22,9 @@ define(['jquery', 'knockout', './router', 'bootstrap', 'knockout-projections', '
     ko.components.register('subtitle', { require: 'app/components/subtitle/subtitle' });
     ko.components.register('addresslabel', { require: 'app/components/address/address' });
     ko.components.register('login', { require: 'app/components/login/login' });
+    ko.components.register('sectiontitle', { require: 'app/components/sectiontitle/sectiontitle' });
 
+    
     // REGISTER PAGES
     ko.components.register('home', { require: 'app/pages/home/home' });
     ko.components.register('components', { require: 'app/pages/components/components' });
@@ -32,7 +33,8 @@ define(['jquery', 'knockout', './router', 'bootstrap', 'knockout-projections', '
     ko.components.register('crud', { require: 'app/pages/crud/crud' });
     ko.components.register('validation', { require: 'app/pages/validation/validation' });
     ko.components.register('bindingcustom', { require: 'app/pages/binding_custom/binding_custom' });
-
+    ko.components.register('sortfilter', { require: 'app/pages/sort_and_filter/sort_and_filter' });
+    
     
     // APPLY BINDINGS
     ko.applyBindings({ route: router.currentRoute });

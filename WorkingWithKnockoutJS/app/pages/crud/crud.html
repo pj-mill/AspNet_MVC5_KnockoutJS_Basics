@@ -10,8 +10,8 @@
 </div>
 
 
-<div id="productList" style="display: block;" data-bind="visible: !editing()">
-    <h2>Available Products</h2>
+<div id="productList"  data-bind="visible: !editing()">
+    <h3 class="bg-success" style="padding:10px 0px 10px 10px;">Available Products</h3>
     <input type="button" id="btnNew" value="New Product" data-bind="click: newProduct" class="btn btn-success pull-right" />
     <table class="table">
         <thead>
@@ -36,7 +36,7 @@
 </div>
 
 <div data-bind="visible: editing, with: currentProduct">
-    <h2 data-bind="text: $parent.actionName"></h2>
+    <h3 class="bg-success" style="padding:10px 0px 10px 10px;" data-bind="text: $parent.actionName"></h3>
     <form class="form-horizontal">
         <div class="form-group">
             <label for="productCode" class="col-sm-2 control-label">Product Code:</label>

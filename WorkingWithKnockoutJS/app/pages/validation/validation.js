@@ -41,9 +41,6 @@
         self.captchaValidator = function (val) { return val == 11; };
         self.mustEqualValidator = function (val, other) { return val == other; };
         
-        
-
-
 
         // Field variables
         self.firstName = ko.observable().extend({ minLength: 2, maxLength: 10 });
@@ -81,21 +78,6 @@
                 self.errors.showAllMessages();
             }
         };
-
-
-        /*
-        // Init KO Validation
-        ko.validation.init({
-            registerExtenders: true,
-            messagesOnModified: true,
-            insertMessages: true,
-            parseInputAttributes: true,
-            messageTemplate: null,
-            errorElementClass: 'has-error',
-            decorateElement: false,
-            decorateElementOnModified: true
-        });
-        */
 
         ko.validation.registerExtenders();
 

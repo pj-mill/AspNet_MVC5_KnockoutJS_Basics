@@ -45,8 +45,8 @@ define(["jquery", "knockout", "crossroads", "historyjs"], function ($, ko, cross
         $("body").on("click", "a",
             function (e) {
                 var title, urlPath;
-                urlPath = $(this).attr("href");
-                if (urlPath.slice(0, 1) == "#" || urlPath.slice(0,4) == "http") {
+                urlPath = $(this).attr("href"); 
+                if (urlPath.slice(0, 1) == "#" || urlPath.slice(0, 4) == "http") { // Allow CORS so that we can link to the project on GitHub
                     return true;
                 }
                 e.preventDefault();

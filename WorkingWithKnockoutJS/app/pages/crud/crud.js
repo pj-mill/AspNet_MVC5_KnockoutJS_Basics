@@ -1,19 +1,16 @@
 ﻿define(["knockout", "text!./crud.html"], function (ko, ListFormTemplate) {
 
-
-
-
+    // Model
     function Product(code, name, price, qty) {
         var self = this;
-
         self.productCode = ko.observable(code);
         self.productName = ko.observable(name);
         self.productPrice = ko.observable(price);
         self.productQty = ko.observable(qty);
     }
 
+    // View Model
     function ListFormViewModel() {
-
         var self = this;
                 
         self.currentProduct = ko.observable(new Product('', '', 0, 0));

@@ -1,9 +1,7 @@
 ﻿define(["knockout", "text!./binding_form.html"],function(ko,bindingFormTemplate){
 
     function Employee() {
-
         var self = this;
-
         self.FirstName = ko.observable("Paul");
         self.LastName = ko.observable("Millar");
 
@@ -15,8 +13,9 @@
         self.EducationList = ko.observableArray();
         self.Gender = ko.observable("0");
 
-        self.DepartmentList = ko.observableArray([{ Id: '0', Name: "Computer Science" }, { Id: '1', Name: "Business & Law" }]);
-        self.DepartmentList.push({ Id: '2', Name: "Arts & Media" });
+        self.DepartmentList = ko.observableArray([  { Id: '0', Name: "Computer Science" },
+                                                    { Id: '1', Name: "Business & Law" },
+                                                    { Id: '2', Name: "Arts & Media" }]);
 
         self.DepartmentId = ko.observable("1");
     }
@@ -47,16 +46,7 @@
             });
 
             self.Message("Submitted");
-            //self.reset();
         };
-
-        // TITLE BINDINGS
-        self.Title = ko.observable("Form Binding");
-
-        self.currentPageTitle = ko.computed(function () {
-            document.title = self.Title();
-            return self.Title();
-        }, this);
 
 
         return self;
