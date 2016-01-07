@@ -99,7 +99,7 @@ define(["jquery", "knockout", "crossroads", "historyjs"], function ($, ko, cross
             }
             else {
                 // This is invoked on activation and by default our router navigates to the home page.
-                return crossroads.parse('/');
+                return crossroads.parse('/home');
             }
         }
     }
