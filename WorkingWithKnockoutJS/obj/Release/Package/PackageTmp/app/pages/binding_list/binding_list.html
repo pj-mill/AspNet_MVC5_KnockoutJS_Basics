@@ -1,14 +1,21 @@
 ﻿<subtitle params="title: 'List Binding',url: 'https://github.com/Apollo013/KnockoutJS/tree/master/WorkingWithKnockoutJS/app/pages/binding_list'"></subtitle>
-<div class="bg-primary" style="padding: 5px; margin-top:10px;">
+
+<div class="bg-primary col-sm-12" style="padding: 5px; margin-top:10px; margin-bottom:10px;">
     <h4>What's being demonstrated ?</h4>
-    <ul>
-        <li>Data-Binding to a 'table' element from an array using 'ko.observableArray'</li>
-        <li>Control flow using 'foreach'</li>        
-        <li>Enabling / Disabling controls based on a certain condition</li>
-        <li>Use of the '$parent' prefix when you need to bind inside a nested binding context</li>
-        <li>Totaling list items using 'ko.computed'</li>
-        <li>Adding / Removing rows to/from a table element</li>
-    </ul>
+    <div class="col-sm-6">
+        <ul>
+            <li>Data-Binding to a 'table' element from an array using 'ko.observableArray'</li>
+            <li>Control flow using 'foreach'</li>
+            <li>Enabling / Disabling controls based on a certain condition</li>
+        </ul>
+    </div>
+    <div class="col-sm-6">
+        <ul>
+            <li>Use of the '$parent' prefix when you need to bind inside a nested binding context</li>
+            <li>Totaling list items using 'ko.computed'</li>
+            <li>Adding / Removing rows to/from a table element</li>
+        </ul>
+    </div>
 </div>
 
 <h3>Your seat reservations (<span data-bind="text: seats().length"></span>)</h3>

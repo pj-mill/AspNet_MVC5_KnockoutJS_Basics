@@ -112,6 +112,8 @@
   <ItemGroup>
     <Content Include="app\components\login\login.html" />
     <Content Include="app\components\login\login.js" />
+    <Content Include="app\components\sectiontitle\sectiontitle.html" />
+    <Content Include="app\components\sectiontitle\sectiontitle.js" />
     <Content Include="app\components\subtitle\subtitle.html" />
     <Content Include="app\components\subtitle\subtitle.js" />
     <Content Include="app\pages\binding_custom\binding_custom.html" />
