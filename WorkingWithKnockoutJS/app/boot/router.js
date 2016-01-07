@@ -1,11 +1,10 @@
-﻿/// <reference path="/Scripts/crossroads/crossroads.js" />
-/*
+﻿/*
 ROUTING USING HistoryJS
 
-Handling anchor clicks to prevent server requests directly: This is actually a big deal. 
+Handling anchor clicks to prevent server requests directly is actually a big deal. 
 Typically we navigate to a different page by specifying an Anchor tag that has a href pointing to the new page. 
-It may be a full path or partial path. When user clicks on an anchor the request is sent to the server by the browser. 
-When using Hasher we worked around this by using href’s that started with a #. 
+It may be a full path or partial path. When user clicks on an anchor, the request is sent to the server by the browser. 
+When using HasherJS, the work-around for this was by using href’s that started with a #. 
 This told the browser that the reference was in the current page itself and then we hooked into the event and did our AJAX magic to load a new page.
 This also had the side effect of putting a # in the URL irrespective of the browser.
 
@@ -14,7 +13,7 @@ To avoid # in the hrefs, we need to handle all href clicks globally and push the
 To do this we assign a click handler for all URLs inside the HTML body tag. 
 We check if the href attribute starts with a #, it means it’s a deliberate reference to some place in the current page and we let the event pass through. 
 If the href doesn’t start with a # we push the path to History using the pushState function. 
-Note we are not using window.pushstate because we want History to manage the pushState for older browser that don’t have a native implementation.
+Note we are not using window.pushstate because we want HistoryJS to manage the pushState for older browsers that don’t have a native implementation.
 */
 define(["jquery", "knockout", "crossroads", "historyjs"], function ($, ko, crossroads) {
 
@@ -27,7 +26,8 @@ define(["jquery", "knockout", "crossroads", "historyjs"], function ($, ko, cross
             { url: 'bindinglist', params: { page: 'bindinglist' } },
             { url: 'crud', params: { page: 'crud' } },
             { url: 'validation', params: { page: 'validation' } },
-            { url: 'bindingcustom', params: { page: 'bindingcustom' } }
+            { url: 'bindingcustom', params: { page: 'bindingcustom' } },
+            { url: 'sortfilter', params: { page: 'sortfilter' } }
         ]
     });
 
@@ -39,10 +39,6 @@ define(["jquery", "knockout", "crossroads", "historyjs"], function ($, ko, cross
                 currentRoute(ko.utils.extend(requestParams, route.params));
             });
         });
-
-        //if (console && console.log) {
-        //crossroads.routed.add(console.log, console);
-        //}
 
         activateCrossroads();
 

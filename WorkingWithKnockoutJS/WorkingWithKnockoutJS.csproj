@@ -126,6 +126,8 @@
     <Content Include="app\pages\crud\crud.js" />
     <Content Include="app\pages\components\components.html" />
     <Content Include="app\pages\components\components.js" />
+    <Content Include="app\pages\sort_and_filter\sort_and_filter.html" />
+    <Content Include="app\pages\sort_and_filter\sort_and_filter.js" />
     <Content Include="app\pages\validation\validation.html" />
     <Content Include="app\pages\validation\validation.js" />
     <Content Include="Content\simple-sidebar.css" />

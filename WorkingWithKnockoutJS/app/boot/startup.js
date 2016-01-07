@@ -33,7 +33,8 @@ define(['jquery', 'knockout', './router', 'bootstrap', 'knockout-projections', '
     ko.components.register('crud', { require: 'app/pages/crud/crud' });
     ko.components.register('validation', { require: 'app/pages/validation/validation' });
     ko.components.register('bindingcustom', { require: 'app/pages/binding_custom/binding_custom' });
-
+    ko.components.register('sortfilter', { require: 'app/pages/sort_and_filter/sort_and_filter' });
+    
     
     // APPLY BINDINGS
     ko.applyBindings({ route: router.currentRoute });

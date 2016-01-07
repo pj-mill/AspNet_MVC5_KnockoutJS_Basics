@@ -1,0 +1,27 @@
+﻿<subtitle params="title: 'Sorting & Filtering', url: 'https://github.com/Apollo013/KnockoutJS/tree/master/WorkingWithKnockoutJS/app/pages/sort_and_filter'"></subtitle>
+
+<div class="bg-primary col-sm-12" style="padding: 5px; margin-top:10px;">
+    <h4>What's being demonstrated ?</h4>
+    <div class="col-sm-6">
+        <ul>
+            <li>Sorting & Filtering observableArrays</li>
+            <li>Adding custom functions using "fn"</li>
+        </ul>
+    </div>
+</div>
+
+<table class="table">
+    <thead>
+        <tr data-bind="foreach: headers">
+            <th data-bind="click: $parent.sort, text: title"></th>
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: people">
+        <tr>
+            <td data-bind="text: firstName"></td>
+            <td data-bind="text: lastName"></td>
+            <td data-bind="text: age"></td>
+            <td data-bind="text: ageGroup"></td>
+        </tr>
+    </tbody>
+</table>
