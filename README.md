@@ -1,4 +1,4 @@
-# KnockoutJS
+# AspNet_MVC5_KnockoutJS_Basics
 ---
 
 Another small ASP.NET app that implements KnockoutJS, RequireJS, CrossroadsJS, HistoryJS & TextJS. The app demonstrates DI, component building, routing, data-binding, sorting, filtering & validation using the fore mention libraries.
@@ -8,9 +8,8 @@ This app demonstrates core functionality relating to KnockoutJS.
 Topics covered include various ways in which to bind to controls and specific attributes, building components, event handling, validation and as a whole, provides one implementation for building an SPA.
 
 ---
-Built using VS2015 Community.
 
-Hosted on Azure - http://knockoutjs.azurewebsites.net/home
+Developed using Visual Studio 2015 Community.
 
 ---
 
